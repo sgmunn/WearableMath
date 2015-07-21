@@ -83,10 +83,11 @@
       <DependentUpon>InterfaceController.cs</DependentUpon>
     </Compile>
     <Compile Include="CalculatorApp.cs" />
-    <Compile Include="MortgageCalcController.cs" />
-    <Compile Include="MortgageCalcController.designer.cs">
-      <DependentUpon>MortgageCalcController.cs</DependentUpon>
+    <Compile Include="MortgageCalculatorController.cs" />
+    <Compile Include="MortgageCalculatorController.designer.cs">
+      <DependentUpon>MortgageCalculatorController.cs</DependentUpon>
     </Compile>
+    <Compile Include="MortgageCalculator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.AppExtension.CSharp.targets" />
   <ItemGroup>

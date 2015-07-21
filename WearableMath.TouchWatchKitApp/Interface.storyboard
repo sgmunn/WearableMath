@@ -120,7 +120,7 @@
                         <outlet property="Button9" destination="0" id="name-outlet-0"/>
                         <outlet property="Menu1" destination="202" id="name-outlet-202"/>
                         <outlet property="ResultLabel" destination="218" id="name-outlet-218"/>
-                        <segue destination="246" kind="relationship" relationship="nextPage" id="267"/>
+                        <segue destination="278" kind="relationship" relationship="nextPage" id="323"/>
                     </connections>
                 </controller>
             </objects>
@@ -131,7 +131,11 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="left" text="Label" id="B5L-eR-adU"/>
+                            </items>
+                        </group>
                         <group alignment="left" id="uCw-4Q-Ouw"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
@@ -139,32 +143,59 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="263"/>
         </scene>
-        <!--Mortgage Calc Controller-->
-        <scene sceneID="245">
+        <!--Mortgage Calculator Controller-->
+        <scene sceneID="277">
             <objects>
-                <controller id="246" customClass="MortgageCalcController">
+                <controller spacing="2" id="278" customClass="MortgageCalculatorController">
                     <items>
-                        <label width="1" alignment="left" text="Label" textAlignment="right" id="272">
+                        <label width="1" alignment="left" text="0" textAlignment="right" id="0W9-ol-GFV">
+                            <color key="textColor" colorSpace="calibratedRGB" red="1" green="0.94117647058823528" blue="0.043137254901960784" alpha="1"/>
+                        </label>
+                        <label alignment="left" text="Repayments" id="7Yh-BC-Euk" textAlignment="center" width="1">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                            <color key="textColor" colorSpace="calibratedRGB" red="1" green="0.95686274509803926" blue="0.086274509803921567" alpha="1"/>
+                        </label>
+                        <separator alignment="left" id="hOG-be-xfh"/>
+                        <label width="1" alignment="left" text="0" textAlignment="right" id="U4S-nd-99h">
                             <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
                         </label>
-                        <button width="1" alignment="left" title="Principle" id="270"/>
-                        <separator alignment="left" id="271"/>
-                        <label alignment="left" text="Label" id="269"/>
-                        <button width="1" alignment="left" title="Interest Rate" id="273"/>
-                        <separator alignment="left" id="274"/>
-                        <label alignment="left" text="Label" id="276"/>
-                        <button width="1" alignment="left" title="Years" id="Gdt-wq-gSU"/>
-                        <separator alignment="left" id="VDo-CN-EP2"/>
-                        <label alignment="left" text="Repayments" id="Pbx-s1-4Tp"/>
-                        <label alignment="left" text="Label" id="Fl0-y1-Bug"/>
-                        <separator alignment="left" id="eIF-oK-urO"/>
+                        <button width="1" height="30" alignment="left" title="Principle" id="Yvb-3k-VaU">
+                            <connections>
+                                <action selector="PrincipleButton_Activated:" destination="278" id="324"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="sLT-tb-HFy"/>
+                        <label width="1" alignment="left" text="4.75" textAlignment="right" id="z94-zy-gSb">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <button width="1" height="30" alignment="left" title="Interest Rate" id="FLs-fI-Gc6">
+                            <connections>
+                                <action selector="InterestButton_Activated:" destination="278" id="325"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="lTl-FB-tPv"/>
+                        <label width="1" alignment="left" text="30" textAlignment="right" id="cXi-27-rl1">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <button width="1" height="30" alignment="left" title="Years" id="ETH-g2-gsD">
+                            <connections>
+                                <action selector="YearsButton_Activated:" destination="278" id="326"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="ZW0-75-xcr"/>
                     </items>
                     <connections>
-                        <outlet property="PrincipleLabel" destination="272" id="name-outlet-272"/>
+                        <outlet property="InterestButton" destination="FLs-fI-Gc6" id="name-outlet-FLs-fI-Gc6"/>
+                        <outlet property="InterestLabel" destination="z94-zy-gSb" id="name-outlet-z94-zy-gSb"/>
+                        <outlet property="PrincipleButton" destination="Yvb-3k-VaU" id="name-outlet-Yvb-3k-VaU"/>
+                        <outlet property="PrincipleLabel" destination="U4S-nd-99h" id="name-outlet-U4S-nd-99h"/>
+                        <outlet property="RepaymentsLabel" destination="0W9-ol-GFV" id="name-outlet-0W9-ol-GFV"/>
+                        <outlet property="YearsButton" destination="ETH-g2-gsD" id="name-outlet-ETH-g2-gsD"/>
+                        <outlet property="YearsLabel" destination="cXi-27-rl1" id="name-outlet-cXi-27-rl1"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="211" y="2"/>
+            <point key="canvasLocation" x="308" y="0.0"/>
         </scene>
     </scenes>
 </document>

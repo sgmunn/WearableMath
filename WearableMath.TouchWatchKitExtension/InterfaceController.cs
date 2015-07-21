@@ -17,7 +17,7 @@ namespace WearableMath
 
 		public InterfaceController (IntPtr handle) : base (handle)
 		{
-			this.app = new CalculatorApp ();
+			this.app = CalculatorApp.Default;
 		}
 
 		public override void Awake (NSObject context)
@@ -72,7 +72,7 @@ namespace WearableMath
 
 		private void DisplayValue ()
 		{
-			this.ResultLabel.SetText (this.app.ValueText);
+			this.ResultLabel.SetText (this.app.DisplayValue.ToString ());
 		}
 
 		partial void Button0_Activated (WKInterfaceButton sender)

@@ -15,55 +15,42 @@ namespace WearableMath
 	partial class InterfaceController
 	{
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button0 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button1 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button10 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button11 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button2 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button3 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button4 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button5 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button6 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button7 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button8 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceButton Button9 { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceLabel ResultLabel { get; set; }
 
 		[Action ("Button0_Activated:")]

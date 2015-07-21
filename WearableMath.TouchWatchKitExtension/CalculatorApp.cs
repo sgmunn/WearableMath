@@ -17,6 +17,11 @@ namespace WearableMath
 		private decimal lastInputValue;
 		private CalculatorButton lastActionButton;
 
+		static CalculatorApp ()
+		{
+			Default = new CalculatorApp ();
+		}
+
 		public CalculatorApp ()
 		{
 			this.numberButtons = new ButtonArrangement [12];
@@ -28,16 +33,18 @@ namespace WearableMath
 			this.AllClear ();
 		}
 
+		public static CalculatorApp Default { get; private set; }
+
 		public bool KeyboardToggled { get; private set; }
 
 		public decimal Value { get; private set; }
 
-		public string ValueText { 
+		public decimal DisplayValue { 
 			get {
 				if (!string.IsNullOrEmpty (this.inputText))
-					return this.inputText;
+					return this.DoParseInput ();
 				
-				return this.Value.ToString ();
+				return this.Value;
 			}
 		}
 
@@ -96,6 +103,8 @@ namespace WearableMath
 				return this.PerformAction (button.Button);
 			case CalculatorButton.Equals:
 				return PerformEquals ();
+			case CalculatorButton.AllClear:
+				return PerformAllClear ();
 			}
 
 			return false;
@@ -125,15 +134,22 @@ namespace WearableMath
 			return false;
 		}
 
-		private void ParseInput ()
+		private decimal DoParseInput ()
 		{
-			if (!this.inputText.Contains (".")) {
+			if (!string.IsNullOrEmpty (this.inputText)) {
 				decimal v;
 				if (decimal.TryParse (this.inputText, out v)) {
-					this.lastInputValue = v;
-				} else {
-					this.lastInputValue = 0;
+					return v;
 				}
+			}
+
+			return 0;
+		}
+
+		private void ParseInput ()
+		{
+			if (!string.IsNullOrEmpty (this.inputText)) {
+				this.lastInputValue = DoParseInput ();
 			}
 		}
 
@@ -178,6 +194,13 @@ namespace WearableMath
 			return true;
 		}
 
+		private bool PerformAllClear ()
+		{
+			this.AllClear ();
+			this.KeyboardToggled = false;
+			return true;
+		}
+
 		private void InitNumberButtons ()
 		{
 			this.numberButtons [0] = new ButtonArrangement { Button = CalculatorButton.Number0, Dark = false, Label = "0" };
@@ -197,8 +220,8 @@ namespace WearableMath
 		private void InitActionButtons ()
 		{
 			this.actionButtons [0] = new ButtonArrangement { Button = CalculatorButton.Equals, Dark = true, Label = "=" };
-			this.actionButtons [1] = new ButtonArrangement { Button = CalculatorButton.None, Dark = false, Label = "" };
-			this.actionButtons [2] = new ButtonArrangement { Button = CalculatorButton.Toggle, Dark = true, Label = "+/-" };
+			this.actionButtons [1] = new ButtonArrangement { Button = CalculatorButton.AllClear, Dark = true, Label = "AC" };
+			this.actionButtons [2] = new ButtonArrangement { Button = CalculatorButton.Toggle, Dark = true, Label = "123" };
 			this.actionButtons [3] = new ButtonArrangement { Button = CalculatorButton.None, Dark = false, Label = "" };
 			this.actionButtons [4] = new ButtonArrangement { Button = CalculatorButton.None, Dark = false, Label = "" };
 			this.actionButtons [5] = new ButtonArrangement { Button = CalculatorButton.None, Dark = false, Label = "" };
@@ -237,6 +260,7 @@ namespace WearableMath
 		Subtract,
 		Multiply,
 		Divide,
-		Equals
+		Equals,
+		AllClear
 	}
 }
