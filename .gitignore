@@ -1,0 +1,9 @@
+packages
+WearableMath.Touch.UITests/bin
+WearableMath.Touch.UITests/obj
+WearableMath.Touch/bin
+WearableMath.Touch/obj
+WearableMath.TouchWatchKitApp/bin
+WearableMath.TouchWatchKitApp/obj
+WearableMath.TouchWatchKitExtension/bin
+WearableMath.TouchWatchKitExtension/obj
