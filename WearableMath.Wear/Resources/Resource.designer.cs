@@ -650,41 +650,41 @@ namespace WearableMath.Wear
 			// aapt resource value: 0x7f090006
 			public const int bottom = 2131296262;
 			
-			// aapt resource value: 0x7f09001d
-			public const int button0 = 2131296285;
+			// aapt resource value: 0x7f090027
+			public const int button0 = 2131296295;
 			
-			// aapt resource value: 0x7f09001e
-			public const int button1 = 2131296286;
-			
-			// aapt resource value: 0x7f090015
-			public const int button10 = 2131296277;
-			
-			// aapt resource value: 0x7f090016
-			public const int button11 = 2131296278;
+			// aapt resource value: 0x7f090028
+			public const int button1 = 2131296296;
 			
 			// aapt resource value: 0x7f09001f
-			public const int button2 = 2131296287;
+			public const int button10 = 2131296287;
 			
-			// aapt resource value: 0x7f09001a
-			public const int button3 = 2131296282;
+			// aapt resource value: 0x7f090020
+			public const int button11 = 2131296288;
 			
-			// aapt resource value: 0x7f09001b
-			public const int button4 = 2131296283;
+			// aapt resource value: 0x7f090029
+			public const int button2 = 2131296297;
 			
-			// aapt resource value: 0x7f09001c
-			public const int button5 = 2131296284;
+			// aapt resource value: 0x7f090024
+			public const int button3 = 2131296292;
 			
-			// aapt resource value: 0x7f090017
-			public const int button6 = 2131296279;
+			// aapt resource value: 0x7f090025
+			public const int button4 = 2131296293;
 			
-			// aapt resource value: 0x7f090018
-			public const int button7 = 2131296280;
+			// aapt resource value: 0x7f090026
+			public const int button5 = 2131296294;
 			
-			// aapt resource value: 0x7f090019
-			public const int button8 = 2131296281;
+			// aapt resource value: 0x7f090021
+			public const int button6 = 2131296289;
 			
-			// aapt resource value: 0x7f090014
-			public const int button9 = 2131296276;
+			// aapt resource value: 0x7f090022
+			public const int button7 = 2131296290;
+			
+			// aapt resource value: 0x7f090023
+			public const int button8 = 2131296291;
+			
+			// aapt resource value: 0x7f09001e
+			public const int button9 = 2131296286;
 			
 			// aapt resource value: 0x7f090010
 			public const int dismiss_overlay_button = 2131296272;
@@ -698,6 +698,12 @@ namespace WearableMath.Wear
 			// aapt resource value: 0x7f090000
 			public const int hybrid = 2131296256;
 			
+			// aapt resource value: 0x7f09001a
+			public const int interestButton = 2131296282;
+			
+			// aapt resource value: 0x7f090019
+			public const int interestLabel = 2131296281;
+			
 			// aapt resource value: 0x7f090007
 			public const int left = 2131296263;
 			
@@ -707,8 +713,8 @@ namespace WearableMath.Wear
 			// aapt resource value: 0x7f09000e
 			public const int message = 2131296270;
 			
-			// aapt resource value: 0x7f090020
-			public const int myButton = 2131296288;
+			// aapt resource value: 0x7f09002b
+			public const int myButton = 2131296299;
 			
 			// aapt resource value: 0x7f090001
 			public const int none = 2131296257;
@@ -716,8 +722,20 @@ namespace WearableMath.Wear
 			// aapt resource value: 0x7f090002
 			public const int normal = 2131296258;
 			
-			// aapt resource value: 0x7f090012
-			public const int resultLabel = 2131296274;
+			// aapt resource value: 0x7f09002a
+			public const int pager = 2131296298;
+			
+			// aapt resource value: 0x7f090018
+			public const int principleButton = 2131296280;
+			
+			// aapt resource value: 0x7f090017
+			public const int principleLabel = 2131296279;
+			
+			// aapt resource value: 0x7f090015
+			public const int repaymentsLabel = 2131296277;
+			
+			// aapt resource value: 0x7f09001d
+			public const int resultLabel = 2131296285;
 			
 			// aapt resource value: 0x7f090008
 			public const int right = 2131296264;
@@ -725,20 +743,35 @@ namespace WearableMath.Wear
 			// aapt resource value: 0x7f090003
 			public const int satellite = 2131296259;
 			
+			// aapt resource value: 0x7f090012
+			public const int scrollView1 = 2131296274;
+			
 			// aapt resource value: 0x7f090004
 			public const int terrain = 2131296260;
 			
-			// aapt resource value: 0x7f090022
-			public const int text = 2131296290;
+			// aapt resource value: 0x7f09002d
+			public const int text = 2131296301;
 			
-			// aapt resource value: 0x7f090021
-			public const int title = 2131296289;
+			// aapt resource value: 0x7f090014
+			public const int textView1 = 2131296276;
+			
+			// aapt resource value: 0x7f09002c
+			public const int title = 2131296300;
 			
 			// aapt resource value: 0x7f090009
 			public const int top = 2131296265;
 			
+			// aapt resource value: 0x7f090016
+			public const int view1 = 2131296278;
+			
 			// aapt resource value: 0x7f090011
 			public const int watch_view_stub = 2131296273;
+			
+			// aapt resource value: 0x7f09001c
+			public const int yearsButton = 2131296284;
+			
+			// aapt resource value: 0x7f09001b
+			public const int yearsLabel = 2131296283;
 			
 			static Id()
 			{
@@ -779,13 +812,19 @@ namespace WearableMath.Wear
 			public const int Main = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int RectangleMain = 2130903043;
+			public const int Mortgage = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int RoundMain = 2130903044;
+			public const int RectangleMain = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int watch_card_content = 2130903045;
+			public const int RectanglePager = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int RoundMain = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int watch_card_content = 2130903047;
 			
 			static Layout()
 			{

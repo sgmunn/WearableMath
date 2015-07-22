@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/resultLabel"
-        android:gravity="right" />
+        android:gravity="right"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
