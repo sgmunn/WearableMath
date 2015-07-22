@@ -82,12 +82,10 @@
     <Compile Include="InterfaceController.designer.cs">
       <DependentUpon>InterfaceController.cs</DependentUpon>
     </Compile>
-    <Compile Include="CalculatorApp.cs" />
     <Compile Include="MortgageCalculatorController.cs" />
     <Compile Include="MortgageCalculatorController.designer.cs">
       <DependentUpon>MortgageCalculatorController.cs</DependentUpon>
     </Compile>
-    <Compile Include="MortgageCalculator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.AppExtension.CSharp.targets" />
   <ItemGroup>
@@ -95,6 +93,10 @@
       <Project>{599B6603-3632-4474-8AC9-A1DD2B715888}</Project>
       <Name>WearableMath.TouchWatchKitApp</Name>
       <IsWatchApp>True</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\WearableMath.Portable\WearableMath.Portable.csproj">
+      <Project>{E4657864-1CCF-45F6-AD0C-23A6243A1207}</Project>
+      <Name>WearableMath.Portable</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
