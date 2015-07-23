@@ -7,8 +7,11 @@ namespace WearableMath.Wear
 {
 	public class CalculatorGridPagerAdapter : FragmentGridPagerAdapter
 	{
+		private CalculatorFragment calculatorFragment;
+
 		public CalculatorGridPagerAdapter (Context ctx, Android.App.FragmentManager gm) :base(gm)
 		{
+			this.calculatorFragment = new CalculatorFragment ();
 		}
 
 		public override Android.App.Fragment GetFragment (int row, int col)
@@ -17,7 +20,7 @@ namespace WearableMath.Wear
 				return new MortageFragment ();
 			}
 
-			return new CalculatorFragment ();
+			return this.calculatorFragment;
 		}
 
 		public override int RowCount {
@@ -29,6 +32,11 @@ namespace WearableMath.Wear
 		public override int GetColumnCount (int rowNum)
 		{
 			return 2;
+		}
+
+		public void Refresh ()
+		{
+			this.calculatorFragment.Display ();
 		}
 	}
 }

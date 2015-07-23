@@ -56,7 +56,7 @@ namespace WearableMath
 			}
 		}
 
-		private bool AllClear ()
+		public bool AllClear ()
 		{
 			this.inputText = "0";
 			this.lastActionButton = CalculatorButton.Plus;

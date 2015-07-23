@@ -73,6 +73,7 @@ namespace WearableMath.Wear
 			this.calc.Principle = (double)CalculatorApp.Default.DisplayValue;
 
 			this.Display ();
+			this.app.AllClear ();
 		}
 
 		private void InterestButton_Click (object sender, EventArgs e)
@@ -81,6 +82,7 @@ namespace WearableMath.Wear
 			calc.Interest = (double)CalculatorApp.Default.DisplayValue / 12f;
 
 			this.Display ();
+			this.app.AllClear ();
 		}
 
 		private void YearsButton_Click (object sender, EventArgs e)
@@ -89,6 +91,7 @@ namespace WearableMath.Wear
 			calc.Periods = (int)CalculatorApp.Default.DisplayValue * 12;
 
 			this.Display ();
+			this.app.AllClear ();
 		}
 
 		private void Display ()

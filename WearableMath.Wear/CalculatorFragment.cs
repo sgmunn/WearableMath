@@ -34,6 +34,22 @@ namespace WearableMath.Wear
 			this.CalculatorLayoutInflated (view);
 		}
 
+		public override void OnAttach (Activity activity)
+		{
+			base.OnAttach (activity);
+		}
+
+		public override void OnResume ()
+		{
+			base.OnResume ();
+		}
+
+		public void Display ()
+		{
+			this.DisplayKeyboard ();
+			this.DisplayValue ();
+		}
+
 		private void CalculatorLayoutInflated (View view)
 		{
 			this.buttons = new Button[12];

@@ -26,7 +26,18 @@ namespace WearableMath.Wear
 		{
 			pager = (GridViewPager)FindViewById (Resource.Id.pager);
 			//pager.SetOnApplyWindowInsetsListener (this);
-			pager.Adapter = new CalculatorGridPagerAdapter (this, this.FragmentManager);
+
+			var adapter = new CalculatorGridPagerAdapter(this, this.FragmentManager);
+
+			pager.Adapter = adapter;
+			pager.PageSelected += (object s, GridViewPager.PageSelectedEventArgs e1) => {
+				Console.WriteLine ("{0}   {1}", e1.P0, e1.P1);
+
+				if (e1.P1 == 0) {
+					// update calc fragment, but how
+					adapter.Refresh ();
+				}
+			};
 		}
 	}
 }
