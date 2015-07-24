@@ -24,7 +24,7 @@ namespace WearableMath.Wear
 		{
 			this.app = CalculatorApp.Default;
 			this.calc = new MortgageCalculator ();
-			this.calc.Interest = 4.75f / 12f;
+			this.calc.Interest = 4.5f / 12f;
 			this.calc.Periods = 30 * 12;
 		}
 
@@ -42,6 +42,12 @@ namespace WearableMath.Wear
 		{
 			base.OnViewCreated (view, savedInstanceState);
 			this.CalculatorLayoutInflated (view);
+		}
+
+		public override void OnStart ()
+		{
+			base.OnStart ();
+			this.Display ();
 		}
 
 		private void CalculatorLayoutInflated (View view)

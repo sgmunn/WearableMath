@@ -12,8 +12,14 @@ namespace WearableMath
 		public MortgageCalculatorController (IntPtr handle) : base (handle)
 		{
 			this.calc = new MortgageCalculator ();
-			this.calc.Interest = 4.75f / 12f;
+			this.calc.Interest = 4.5f / 12f;
 			this.calc.Periods = 30 * 12;
+		}
+
+		public override void WillActivate ()
+		{
+			base.WillActivate ();
+			this.Display ();
 		}
 
 		private void Display ()
