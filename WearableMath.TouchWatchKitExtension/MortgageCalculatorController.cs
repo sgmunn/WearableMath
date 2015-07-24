@@ -30,6 +30,7 @@ namespace WearableMath
 			this.calc.Principle = (double)CalculatorApp.Default.DisplayValue;
 
 			this.Display ();
+			CalculatorApp.Default.AllClear ();
 		}
 
 		partial void InterestButton_Activated (WatchKit.WKInterfaceButton sender)
@@ -38,6 +39,7 @@ namespace WearableMath
 			calc.Interest = (double)CalculatorApp.Default.DisplayValue / 12f;
 
 			this.Display ();
+			CalculatorApp.Default.AllClear ();
 		}
 
 		partial void YearsButton_Activated (WatchKit.WKInterfaceButton sender)
@@ -46,6 +48,7 @@ namespace WearableMath
 			calc.Periods = (int)CalculatorApp.Default.DisplayValue * 12;
 
 			this.Display ();
+			CalculatorApp.Default.AllClear ();
 		}
 	}
 }

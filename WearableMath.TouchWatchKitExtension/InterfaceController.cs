@@ -32,6 +32,8 @@ namespace WearableMath
 		{
 			// This method is called when the watch view controller is about to be visible to the user.
 			Console.WriteLine ("{0} will activate", this);
+			this.DisplayKeyboard ();
+			this.DisplayValue ();
 		}
 
 		public override void DidDeactivate ()
@@ -42,7 +44,6 @@ namespace WearableMath
 
 		private void DisplayKeyboard ()
 		{
-			Console.WriteLine (">> {0}", this.app.Buttons [0].Label);
 			this.Button0.SetTitle (this.app.Buttons [0].Label);
 			this.Button1.SetTitle (this.app.Buttons [1].Label);
 			this.Button2.SetTitle (this.app.Buttons [2].Label);
